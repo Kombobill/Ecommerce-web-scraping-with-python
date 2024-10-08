@@ -1,7 +1,6 @@
-import requests
 from bs4 import BeautifulSoup
-
-baseurl = 'https://www.thewhiskyexchange.com/'
-headers = {
-    'User-Agent': 'https://explore.whatismybrowser.com/useragents/parse/835464209-chrome-linux-blink'
-}
+import requests
+url = "https://www.tutorialspoint.com/index.htm"
+req = requests.get(url)
+soup = BeautifulSoup(req.text, "html.parser")
+print(soup.title)
